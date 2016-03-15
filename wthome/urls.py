@@ -10,11 +10,13 @@ urlpatterns = patterns('',
     # url(r'^$', 'wthome.views.home', name='home'),
     
     # Static Urls to css, js, images
-    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    # beginning (.*) makes the admin page look good
+    (r'^(.*)static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', mainPage),
+    # For CETS apache the server
     url(r'^index.php$', mainPage),
     # url(r'^login/', include('home.urls'))
     
