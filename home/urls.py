@@ -5,5 +5,5 @@ from home import views
 urlpatterns = patterns('',
 	url(r'^login', views.login, name="login"),
 	url(r'^signup', views.signup, name="signup"),
-  	url(r'^', TemplateView.as_view(template_name='index.html'))
+  	url(r'^', views.mainPage, name="mainPage")
 )

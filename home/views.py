@@ -4,7 +4,14 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.db import models
+from models import Banner
 from home.models import Users
+
+def mainPage(request):
+	context = RequestContext(request)
+
+	b = Banner.objects.get() 
+	return render_to_response('index.html', {'banner': b}, context)
 
 def login(request):
  # Request the context of the request.
