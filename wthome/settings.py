@@ -27,6 +27,7 @@ DEBUG = (BASE_DIR != '/home1/w/wthouse/www-root/home')
 
 INSTALLED_APPS = (
                   'django.contrib.admin',
+                  'django.contrib.admindocs',
                   'django.contrib.auth',
                   'django.contrib.contenttypes',
                   'django.contrib.sessions',
