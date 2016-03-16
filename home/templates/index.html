@@ -210,162 +210,40 @@
 <div class="page" style="margin-bottom: 0px;">   
 
     <div class="container">
-      <div class="row">
-          <h2 style="text-align: center; ">The Weiss Tech House is made up of 6 individual committees, each with their own projects and specialties.</h2>
-      <div class="one-third column">
-              <!-- START service-box -->
-        <div class="service-box" style="min-height: 460px">
-                 <!-- START ICON -->
 
-                   <div>
-                      <h3>Innovation Fund</h3><!-- END service-box TITLE -->
-                      <i class="fa fa-usd fa-5x"></i>
-                   </div>
-                 <!-- END ICON -->  
-                 
-                <!-- START service-box DESCIPTION --> 
-                <div class="service-description">
-                   <p></p><!-- END service-box DESCRIPTION --> 
-                </div>
-                <!-- START service-box DESCIPTION --> 
-                <h6>What we do</h6>
-                   <ul class="styled-list">
-                    <li>Our in-house, mini-venture capital fund.</li>
-                    <li>Hears student project pitches and awards grants of up to $1,000 to student innovators</li>
-                    <li>Facilitate the integration of accepted projects into the Weiss Tech House</li>
-                    <li>Seeking highly responsible individuals who can make a commitment to this process.</li>
-                   </ul>
-               </div> <!-- END service-box -->                                   
-      </div> <!-- END ONETHIRD COLUMN --> 
-          
+      {% if committees %}
+        {% for committee in committees %}
 
-
-
-      <div class="one-third column">
-              <!-- START service-box -->
-        <div class="service-box" style="min-height: 460px">
-                 <!-- START ICON -->
-                   <div>
-                      <h3>PennVention</h3><!-- END service-box TITLE -->
-                      <i class="fa fa-paper-plane fa-5x"></i>
-                   </div>
-                 <!-- END ICON -->  
-                 
-                <!-- START service-box DESCIPTION --> 
-                <div class="service-description">
-                   <p></p><!-- END service-box DESCRIPTION -->
-                </div> 
-                  <h6>What we do</h6>
-                   <ul class="styled-list">
-                    <li>Responsible for producing the annual PennVention student invention competition, Penn's tech startup competition with $20K+ in prizes.</li>
-                    <li>Connects PennVention teams with industry mentors</li>
-                    <li>Produces the annual Mini-Mentoring Marathon in the fall</li>
-                   </ul>
-                <!-- START service-box DESCIPTION --> 
-                 
-               </div> <!-- END service-box -->                                   
-      </div> <!-- END ONETHIRD COLUMN --> 
-          
-
-        <div class="one-third column">
-              <!-- START service-box -->
-            <div class="service-box" style="min-height: 460px">
-                 <!-- START ICON -->
-
-                   <div>
-                      <h3>WeissLabs</h3><!-- END service-box TITLE -->
-                      <i class="fa fa-users fa-5x"></i>
-                   </div>
-                 <!-- END ICON -->  
-                 
-                <!-- START service-box DESCIPTION --> 
-                <div class="service-description">
-                   <p></p><!-- END service-box DESCRIPTION --> 
-                </div>
-                <!-- START service-box DESCIPTION --> 
-                  <h6>What we do</h6>
-                   <ul class="styled-list">
-                    <li>Feature 5 weeks of hands-on lessons related to entrepreneurship and delivered by industry-experts and mentors</li>
-                    <li>Provide support to teams through our associated professors at the University of Pennsylvania</li>
-                    <li>Offer a physical workspace which allows teams to interact, work on their ventures or to simply be innovative</li>
-                   </ul>
-               </div> <!-- END service-box -->                                   
-      </div> <!-- END ONETHIRD COLUMN -->
-                  
-     </div>  <!-- END ROW -->  
-
-          
-      <div class="one-third column">
-              <!-- START service-box -->
-        <div class="service-box" style="min-height: 460px">
-                 <!-- START ICON -->
-                   <div>
-                      <h3>Platform Team</h3><!-- END service-box TITLE -->
-                      <i class="fa fa-code fa-5x"></i>
-                   </div>
-                 <!-- END ICON -->  
-                 
-                <!-- START service-box DESCIPTION --> 
-                <div class="service-description" >
-                  <p></p><!-- END service-box DESCRIPTION -->
-                </div>
-                  <h6>What we do</h6>
-                   <ul class="styled-list">
-                    <li>Make the Weiss Tech House better by building products that help entrepreneurs around campus, including this website!</li>
-                    <li>We are looking to drive growth, track success, find new opportunities, and maintain infrastructure.</li>
-                    <li>If you are a coder, designer, data guru, or just have a passion to grow entrepreneurship, check us out!</li>
-                   </ul>
-               </div> <!-- END service-box -->                                   
-      </div> <!-- END ONETHIRD COLUMN --> 
-
-
-      <div class="one-third column">
-              <!-- START service-box -->
-        <div class="service-box" style="min-height: 460px">
-                 <!-- START ICON -->
-                   <div>
-                      <h3>Events Roadmap</h3><!-- END service-box TITLE -->
-                      <i class="fa fa-taxi fa-5x"></i>
-                   </div>
-                 <!-- END ICON -->  
-                 
-                <!-- START service-box DESCIPTION --> 
-                <div class="service-description">
-                   <p></p><!-- END service-box DESCRIPTION -->
-                </div> 
-                  <h6>What we do</h6>
-                   <ul class="styled-list">
-                    <li>Focus on entrepreneurship education</li>
-                    <li>Create lesson plans in science, technology, and entrepreneurship</li>
-                    <li>Hold events like:<br>Emerging Technology Panel<br>Innovation Week<br>Elevator Pitch<br>and more!</li>
-                   </ul>
-                <!-- START service-box DESCIPTION --> 
-                 
-               </div> <!-- END service-box -->                                   
-      </div> <!-- END ONETHIRD COLUMN --> 
-          
-      <div class="one-third column">
-              <!-- START service-box -->
-        <div class="service-box" style="min-height: 460px">
-                 <!-- START ICON -->
-                   <div>
-                      <h3>Penn Innovation Conf.</h3><!-- END service-box TITLE -->
-                      <i class="fa fa-slideshare fa-5x"></i>
-                   </div>
-                 <!-- END ICON -->  
-                 
-                <!-- START service-box DESCIPTION --> 
-                <div class="service-description" >
-                  <p></p><!-- END service-box DESCRIPTION -->
-                </div>
-                  <h6>What we do</h6>
-                   <ul class="styled-list">
-                    <li>Partners with the numerous clubs on campus</li>
-                    <li>Organize a high-profile entrepreneurship conference</li>
-                    <li>Excite Penn about getting involved in startups!</li>
-                   </ul>
-               </div> <!-- END service-box -->                                   
-      </div> <!-- END ONETHIRD COLUMN --> 
+          {% if forloop.counter|divisibleby:4 or forloop.counter == 1 %}<!-- BEGIN ROW --><div class="row">{% endif %}
+          {% if forloop.counter == 1%}<h2 style="text-align: center; ">The Weiss Tech House is made up of 6 individual committees, each with their own projects and specialties.</h2>{% endif %}
+            <!-- BEGIN COMMITTEE -->
+            <div class="one-third column">
+                    <!-- START service-box -->
+              <div class="service-box" style="min-height: 460px">
+                       <!-- START ICON -->
+                         <div>
+                            <h3>{{ committee.name }}</h3><!-- END service-box TITLE -->
+                            <i class="fa {{ committee.icon }} fa-5x"></i>
+                         </div>
+                       <!-- END ICON -->  
+                       
+                      <!-- START service-box DESCIPTION --> 
+                      <div class="service-description">
+                         <p></p><!-- END service-box DESCRIPTION --> 
+                      </div>
+                      <!-- START service-box DESCIPTION --> 
+                      <h6>What we do</h6>
+                         <ul class="styled-list">
+                          <li>{{ committee.text_1 }}</li>
+                          <li>{{ committee.text_2 }}</li>
+                          <li>{{ committee.text_3 }}</li>
+                         </ul>
+              </div> <!-- END service-box -->                                   
+            </div> <!-- END ONETHIRD COLUMN --> 
+            <!-- END COMMITTEE -->
+          {% if forloop.counter|divisibleby:3 or forloop.last %}</div><!-- END ROW -->{% endif %}
+        {% endfor %}
+      {% endif %}
                   
      </div>  <!-- END ROW --> 
     </div> <!-- END CONTAINER -->              

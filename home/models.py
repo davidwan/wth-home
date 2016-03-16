@@ -181,3 +181,23 @@ class Alumni(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Committee(models.Model):
+
+    name = models.CharField(max_length=50)
+    icon = models.CharField(max_length=500)
+    text_1 = models.CharField(max_length=500, blank=True)
+    text_2 = models.CharField(max_length=500, blank=True)
+    text_3 = models.CharField(max_length=500, blank=True)
+    current_info = models.CharField(max_length=500, blank=True)
+    current_info_link = models.CharField(max_length=500, blank=True)
+
+
+    class Meta(object):
+        managed = True
+        db_table = 'committee'
+        app_label = 'home'
+
+    def __str__(self):
+        return self.name
