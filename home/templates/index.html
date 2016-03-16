@@ -1793,165 +1793,33 @@
     </div>
     <div id="portfolio-wrap" style="position: relative; overflow: hidden; height: 576px;" class="isotope">
     
-    <!-- START PORTFOLIO ITEM -->                   
-      <div class="portfolio-item one-third column design videography photography web branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-             <div class="portfolio">
-                <a href="http://ubeam.com/" class="portfolio-image">
-                  <img src="{{STATIC_URL}}images/companies/uBeam.png" alt="Portfolio 1"><!-- END PORTFOLIO IMAGE -->   
-                  
-                  <div class="portfolio-overlay">                
-                      <div class="thumb-info">                
-                        <h3>uBeam</h3><!-- OVERLAY TITLE -->  
+      {% if alumnis %}
+        {% for alumni in alumnis %}
+          <!-- START PORTFOLIO ITEM -->                   
+          <div class="portfolio-item one-third column videography web isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 338px, 0px);">
+                 <div class="portfolio">
+                    {% if alumni.website %}
+                    <a href="http://www.wetrain.fitness/" class="portfolio-image">
+                    {% endif %}
+                      <img src="{{ MEDIA_URL }}{{ alumni.image }}" alt="Portfolio 7"><!-- END PORTFOLIO IMAGE -->   
+                      
+                      <div class="portfolio-overlay">                
+                          <div class="thumb-info">                
+                            <h3>{{ alumni.name }}</h3><!-- OVERLAY TITLE -->  
+                          </div>
                           <div class="portfolio-text">
-                            <p>Harnessing the power of ultrasound </p>
-                            <p>transmitters, the team behind UBeam is    </p>
-                            <p> developing a way to wirelessly charge   </p>
-                            <p>gadgets at a distance.</p>
-                          </div><!-- END PORTFOLIO TAGS -->  
-                      </div>                
-                  </div><!-- END PORTFOLIO OVERLAY --> 
-                
-                </a>
-             </div>
-      </div>
-      <!-- END PORTFOLIO ITEM -->    
-      
-                     
-      <!-- START PORTFOLIO ITEM -->                   
-      <div class="portfolio-item one-third column branding videography web isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 0px, 0px);">
-             <div class="portfolio">
-                <a href="http://www.biobots.io/" class="portfolio-image">
-                  <img src="{{STATIC_URL}}images/companies/BioBots.png" alt="Portfolio 2"><!-- END PORTFOLIO IMAGE -->   
-                  
-                  <div class="portfolio-overlay">                
-                      <div class="thumb-info">                
-                        <h3>BioBots</h3><!-- OVERLAY TITLE -->  
-                        <div class="portfolio-text">
-                          <p>The Bio Bots team has created a desktop 3D </p>
-                          <p>bioprinter that builds functional three </p>
-                          <p>dimensional living tissue, perfect for rapid  </p>
-                          <p>bio-prototyping in the field of regenerative medicine.  </p><!-- END PORTFOLIO TAGS -->  
-                        </div>
-                      </div>                
-                  </div><!-- END PORTFOLIO OVERLAY --> 
-                
-                </a>
-             </div>
-      </div>
-      <!-- END PORTFOLIO ITEM -->  
-                 
-      <!-- START PORTFOLIO ITEM -->                   
-      <div class="portfolio-item one-third column branding photography web design isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(540px, 0px, 0px);">
-             <div class="portfolio">
-                <a href="http://feversmart.com/" class="portfolio-image">
-                  <img src="{{STATIC_URL}}images/companies/FeverSmart.png" alt="Portfolio 3"><!-- END PORTFOLIO IMAGE -->   
-                  
-                  <div class="portfolio-overlay">                
-                      <div class="thumb-info">                
-                        <h3>FeverSmart</h3><!-- OVERLAY TITLE -->  
-                        <div class="portfolio-text">
-                          <p>This company makes it easy to track temperature</p>
-                          <p>of sick loved ones. They’ve developed a   </p>
-                          <p>disposable patch for the patient’s skin that sends  </p>
-                          <p>data to the Fever Smart smartphone app, sending  </p>
-                          <p>alerts when temperature starts to rise and making </p>
-                          <p>the temperature stats available remotely.</p><!-- END PORTFOLIO TAGS -->  
-                        </div>
-                      </div>                
-                  </div><!-- END PORTFOLIO OVERLAY --> 
-                
-                </a>
-             </div>
-      </div>
-      <!-- END PORTFOLIO ITEM -->
-                  
-      <!-- START PORTFOLIO ITEM -->                   
-      <div class="portfolio-item one-third column branding photography web design isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(810px, 0px, 0px);">
-             <div class="portfolio">
-                <a href="http://www.betterthansiri.com/" class="portfolio-image">
-                  <img src="{{STATIC_URL}}images/companies/GoogolPlex.png" alt="Portfolio 4"><!-- END PORTFOLIO IMAGE -->   
-                  
-                  <div class="portfolio-overlay">                
-                      <div class="thumb-info">                
-                        <h3>GoogolPlex</h3><!-- OVERLAY TITLE -->  
-                        <div class="portfolio-text">
-                          <p>This creative team has figured out a</p>
-                          <p>way to hack Apple’s Siri, allowing iPhone users  </p>
-                          <p>to use voice commands to interact with  </p>
-                          <p>third party apps like Spotify, Nest, and others.  </p> 
-                        </div>
-                      </div>                
-                  </div><!-- END PORTFOLIO OVERLAY --> 
-                
-                </a>
-             </div>
-      </div>
-      <!-- END PORTFOLIO ITEM -->
-                
-      <!-- START PORTFOLIO ITEM -->                   
-      <div class="portfolio-item one-third column branding videography isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 338px, 0px);">
-             <div class="portfolio">
-                <a href="http://www.govpredict.com/" class="portfolio-image">
-                  <img src="{{STATIC_URL}}images/companies/GovPredict.png" alt="Portfolio 5"><!-- END PORTFOLIO IMAGE -->   
-                  
-                  <div class="portfolio-overlay">                
-                      <div class="thumb-info">                
-                        <h3>Gov Predict</h3><!-- OVERLAY TITLE -->  
-                        <div class="portfolio-text">
-                          <p>Gov Predict uses public data and </p>
-                          <p>proprietary algorithms to predict the </p>
-                          <p>US Congress voting margins and patterns.  </p><!-- END PORTFOLIO TAGS -->  
-                        </div>
-                      </div>                
-                  </div><!-- END PORTFOLIO OVERLAY --> 
-                
-                </a>
-             </div>
-      </div>
-      <!-- END PORTFOLIO ITEM -->
-                
-                
-      <!-- START PORTFOLIO ITEM -->                   
-      <div class="portfolio-item one-third column videography web isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 338px, 0px);">
-             <div class="portfolio">
-                <a href="http://identifiedtech.com/" class="portfolio-image">
-                  <img src="{{STATIC_URL}}images/companies/IdentifiedTechnologies.png" alt="Portfolio 6"><!-- END PORTFOLIO IMAGE -->   
-                  
-                  <div class="portfolio-overlay">                
-                      <div class="thumb-info">                
-                        <h3>Identified Technologies</h3><!-- OVERLAY TITLE -->  
-                        <div class="portfolio-text">
-                          <p>Identified Technologies uses unmanned aerial </p>
-                          <p>vehicles to collect data for its clients, </p>
-                          <p>particularly those in the oil &#38; gas and  </p>
-                          <p>construction industries. They collect everything </p>
-                          <p>from photos and videos to point clouds and    </p>
-                          <p>gas-sensing data, all easily accessible online.</p><!-- END PORTFOLIO TAGS -->  
-                        </div>
-                      </div>                
-                  </div><!-- END PORTFOLIO OVERLAY --> 
-                
-                </a>
-             </div>
-      </div>
-      <!-- END PORTFOLIO ITEM -->  
+                            {{ alumni.content }} 
+                          </div>               
+                      </div><!-- END PORTFOLIO OVERLAY --> 
+                    {% if alumni.website %}
+                    </a>
+                    {% endif %}
 
-      <!-- START PORTFOLIO ITEM -->                   
-      <div class="portfolio-item one-third column videography web isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 338px, 0px);">
-             <div class="portfolio">
-                <a href="http://www.wetrain.fitness/" class="portfolio-image">
-                  <img src="{{STATIC_URL}}images/companies/WeTrain.png" alt="Portfolio 7"><!-- END PORTFOLIO IMAGE -->   
-                  
-                  <div class="portfolio-overlay">                
-                      <div class="thumb-info">                
-                        <h3>WeTrain</h3><!-- OVERLAY TITLE -->  
-                      </div>                
-                  </div><!-- END PORTFOLIO OVERLAY --> 
-                
-                </a>
-             </div>
-      </div>
-      <!-- END PORTFOLIO ITEM -->                     
+                 </div>
+          </div>
+          <!-- END PORTFOLIO ITEM -->
+          {% endfor %}
+      {% endif %}
    </div>
    <h3 style="text-align: center; padding-top: 30px">We’re thrilled by the success of both alums and current students!</h3>                
 

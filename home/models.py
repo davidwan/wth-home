@@ -8,7 +8,7 @@
 # Also note: You'll have to insert the output of 'django-admin.py sqlcustom [app_label]'
 # into your database.
 from __future__ import unicode_literals
-
+import os
 from django.db import models
 
 
@@ -162,4 +162,22 @@ class Banner(models.Model):
 
     def __str__(self):
         return self.name
-  
+
+class Alumni(models.Model):
+
+    def get_image_path(instance, filename):
+        return os.path.join('alumni', filename)
+
+    name = models.CharField(max_length=50)
+    content = models.CharField(max_length=500)
+    website = models.CharField(max_length=500, blank=True)
+    image = models.ImageField(upload_to=get_image_path)
+
+
+    class Meta(object):
+        managed = True
+        db_table = 'alumni'
+        app_label = 'home'
+
+    def __str__(self):
+        return self.name

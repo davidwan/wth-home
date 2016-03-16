@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     # Static Urls to css, js, images
     # beginning (.*) makes the admin page look good
     (r'^(.*)static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    (r'^(.*)media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),

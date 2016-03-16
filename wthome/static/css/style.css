@@ -1186,6 +1186,7 @@ p.quote {
 	position: absolute;
 	top: 50%;
 	width: 100%;
+	line-height: 15px;
 }
 /**** Isotope CSS3 transitions ****/
 
