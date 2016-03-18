@@ -196,46 +196,7 @@
   </div><!-- END CONTAINER --> 
 </div>
 
-<div class="page" style="margin-bottom: 0px;">   
-
-    <div class="container">
-
-      {% if committees %}
-        {% for committee in committees %}
-
-          {% if forloop.counter|divisibleby:4 or forloop.counter == 1 %}<!-- BEGIN ROW --><div class="row">{% endif %}
-          {% if forloop.counter == 1%}<h2 style="text-align: center; ">The Weiss Tech House is made up of 6 individual committees, each with their own projects and specialties.</h2>{% endif %}
-            <!-- BEGIN COMMITTEE -->
-            <div class="one-third column">
-                    <!-- START service-box -->
-              <div class="service-box" style="min-height: 460px">
-                       <!-- START ICON -->
-                         <div>
-                            <h3>{{ committee.name }}</h3><!-- END service-box TITLE -->
-                            <i class="fa {{ committee.icon }} fa-5x"></i>
-                         </div>
-                       <!-- END ICON -->  
-                       
-                      <!-- START service-box DESCIPTION --> 
-                      <div class="service-description">
-                         <p></p><!-- END service-box DESCRIPTION --> 
-                      </div>
-                      <!-- START service-box DESCIPTION --> 
-                      <h6>What we do</h6>
-                         <ul class="styled-list">
-                          <li>{{ committee.text_1 }}</li>
-                          <li>{{ committee.text_2 }}</li>
-                          <li>{{ committee.text_3 }}</li>
-                         </ul>
-              </div> <!-- END service-box -->                                   
-            </div> <!-- END ONETHIRD COLUMN --> 
-            <!-- END COMMITTEE -->
-          {% if forloop.counter|divisibleby:3 or forloop.last %}</div><!-- END ROW -->{% endif %}
-        {% endfor %}
-      {% endif %}
-                  
-     </div>  <!-- END ROW --> 
-    </div> <!-- END CONTAINER -->              
+  {% include "committees.html" %}            
 </div>
 
 <div class="fullwidth grey" style="margin-bottom: 0px;">        
