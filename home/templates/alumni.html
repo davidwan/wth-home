@@ -1,0 +1,41 @@
+<div class="page" id="portfolio" style="margin-bottom: 0px; padding-bottom: 0px">
+    <div class="container">  
+            <div class="row">
+                 <div class="sixteen columns">
+                    <h2 style="text-align: center;">Weiss Tech House has supported the creation of numerous successful enterprises</h2>
+                  </div>
+           </div><!-- END SIXTEEN COLUMNS --> 
+     </div>                
+     
+    </div>
+    <div id="portfolio-wrap" style="position: relative; overflow: hidden; height: 576px;" class="isotope">
+    
+      {% if alumnis %}
+        {% for alumni in alumnis %}
+          <!-- START PORTFOLIO ITEM -->                   
+          <div class="portfolio-item one-third column videography web isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 338px, 0px);">
+                 <div class="portfolio">
+                    {% if alumni.website %}
+                    <a href="http://www.wetrain.fitness/" class="portfolio-image">
+                    {% endif %}
+                      <img src="{{ MEDIA_URL }}{{ alumni.image }}" alt="Portfolio 7"><!-- END PORTFOLIO IMAGE -->   
+                      
+                      <div class="portfolio-overlay">                
+                          <div class="thumb-info">                
+                            <h3>{{ alumni.name }}</h3><!-- OVERLAY TITLE -->  
+                          </div>
+                          <div class="portfolio-text">
+                            {{ alumni.content }} 
+                          </div>               
+                      </div><!-- END PORTFOLIO OVERLAY --> 
+                    {% if alumni.website %}
+                    </a>
+                    {% endif %}
+
+                 </div>
+          </div>
+          <!-- END PORTFOLIO ITEM -->
+          {% endfor %}
+      {% endif %}
+   </div>
+   <h3 style="text-align: center; padding-top: 30px">We’re thrilled by the success of both alums and current students!</h3>

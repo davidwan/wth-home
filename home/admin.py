@@ -5,3 +5,4 @@ from models import *
 admin.site.register(Banner)
 admin.site.register(Alumni)
 admin.site.register(Committee)
+admin.site.register(TeamMember)

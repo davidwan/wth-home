@@ -201,3 +201,22 @@ class Committee(models.Model):
 
     def __str__(self):
         return self.name
+
+class TeamMember(models.Model):
+
+    def get_image_path(instance, filename):
+        return os.path.join('team_member', filename)
+
+    name = models.CharField(max_length=100)
+    role = models.CharField(max_length=100, blank=True)
+    bio = models.CharField(max_length=2000, blank=True)
+    image = models.ImageField(upload_to=get_image_path)
+
+
+    class Meta(object):
+        managed = True
+        db_table = 'team_member'
+        app_label = 'home'
+
+    def __str__(self):
+        return self.name

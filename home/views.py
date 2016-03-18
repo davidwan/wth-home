@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.db import models
-from models import Banner, Alumni, Committee
+from models import Banner, Alumni, Committee, TeamMember
 from home.models import Users
 
 def mainPage(request):
@@ -13,7 +13,11 @@ def mainPage(request):
 	banner = Banner.objects.get()
 	alumnis = Alumni.objects.all()
 	committees = Committee.objects.all()
-	return render_to_response('index.html', {'banner': banner, 'alumnis': alumnis, "committees": committees}, context)
+	team_members = TeamMember.objects.all()
+	return render_to_response('index.html', {'banner': banner, 
+											'alumnis': alumnis, 
+											"committees": committees,
+											"team_members": team_members}, context)
 
 def login(request):
  # Request the context of the request.

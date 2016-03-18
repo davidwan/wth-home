@@ -1,0 +1,11 @@
+	{% if banner %}
+	  {% if banner.link %}
+	  <a href="{{ banner.link }}">
+	  {% endif %}
+	    {% if banner.status %}
+	      <h3 align="center" style="margin-top: 12px">{{ banner.content }}</h3>
+	    {% endif %}
+	  {% if banner.link %}
+	    </a>
+	  {% endif %}
+	{% endif %}
