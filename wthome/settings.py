@@ -12,7 +12,6 @@
 import os
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -20,7 +19,7 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 SECRET_KEY = 'v=d%cc^=g_+u16b4#&xj7@1z(b@9qeh+43(du$6j+jfl12iy70'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (BASE_DIR != '/home1/w/wthouse/www-root/home')
+DEBUG = (BASE_DIR != '/mnt/castor/seas_home/w/wthouse/www-root/home/wthome')
 
 
 # Application definition
