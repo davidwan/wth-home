@@ -10,10 +10,11 @@ from home.models import Users
 def mainPage(request):
 	context = RequestContext(request)
 
-	banner = Banner.objects.get()
-	alumnis = Alumni.objects.all()
-	committees = Committee.objects.all()
-	team_members = TeamMember.objects.all()
+	# Sorts all content by ID - this may be bad later
+	banner = sorted(Banner.objects.all(), key=lambda x: x.id)[0]
+	alumnis = sorted(Alumni.objects.all(), key=lambda x: x.id)
+	committees = sorted(Committee.objects.all(), key=lambda x: x.id)
+	team_members = sorted(TeamMember.objects.all(), key=lambda x: x.id)
 	return render_to_response('index.html', {'banner': banner, 
 											'alumnis': alumnis, 
 											"committees": committees,
