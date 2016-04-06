@@ -171,7 +171,7 @@ class Alumni(models.Model):
     name = models.CharField(max_length=50)
     content = models.CharField(max_length=500)
     website = models.CharField(max_length=500, blank=True)
-    image = models.ImageField(upload_to=get_image_path)
+    image = models.ImageField(upload_to=get_image_path, help_text='For best results, pictures should be 450x320!')
 
 
     class Meta(object):
@@ -186,7 +186,7 @@ class Alumni(models.Model):
 class Committee(models.Model):
 
     name = models.CharField(max_length=50)
-    icon = models.CharField(max_length=500)
+    icon = models.CharField(max_length=500, help_text="If you want to change the committees icon, see https://fortawesome.github.io/Font-Awesome/icons/ for a full list of available icons")
     text_1 = models.CharField(max_length=500, blank=True)
     text_2 = models.CharField(max_length=500, blank=True)
     text_3 = models.CharField(max_length=500, blank=True)
@@ -210,7 +210,7 @@ class TeamMember(models.Model):
     name = models.CharField(max_length=100)
     role = models.CharField(max_length=100, blank=True)
     bio = models.CharField(max_length=2000, blank=True)
-    image = models.ImageField(upload_to=get_image_path)
+    image = models.ImageField(upload_to=get_image_path, help_text="For best results, pictures should be 313x213!")
 
 
     class Meta(object):
