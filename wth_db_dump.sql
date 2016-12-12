@@ -1051,7 +1051,7 @@ fl96lzx6y90piojy8w8jthstw3xibjig	NDcwZTdiMWU1Y2IzM2FlOWY4YTE3ZDU2MzczZjIxNWViMTU
 --
 
 COPY team_member (id, name, role, bio, image) FROM stdin;
-1	George Weiss	Founder	He is the founder!	team_member/weiss.jpg
+1	George Weiss	Founder	Heee is the founder!	team_member/weiss.jpg
 2	Dr. Mark Yim	Faculty Director	Dr. Yim is the Gabel Family Term Junior Professor and Undergraduate Curriculum Chair in the School of Engineering and Applied Sciences. A renowned robotics and innovation expert, Dr. Yim is popular among our students for his work developing the Rumble Pack technology in the Playstation2. Dr. Yim was Associate Faculty Director for the Weiss Tech House from 2005-2008. In 2008, he became the Faculty Director.	team_member/yim.jpg
 3	Dr. David Hsu	Associate Faculty Director	Dr. Hsu is currently an Associate Professor of Management at the Wharton School, teaching two MBA electives, Entrepreneurship and Technology Strategy. Dr. Hsu’s areas of interest are in entrepreneurial innovation and management. Within that domain, he has investigated topics such as intellectual property management, start-up innovation, technology commercialization strategy, and venture capital. In 2008, he became the Associate Faculty Director. 	team_member/hsu.jpg
 4	Anne Stamer	Director	Ms. Stamer manages the marketing, public relations, fundraising and day-to-day activities of the Weiss Tech House and assists student volunteers in achieving the organization’s goals. Prior to joining the WTH, she was the Associate Director of the Wharton Business Plan Competition (WBPC) at the Wharton Entrepreneurial Programs.	team_member/stamer.jpg
