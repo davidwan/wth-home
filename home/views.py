@@ -11,7 +11,7 @@ def mainPage(request):
 	context = RequestContext(request)
 
 	# Sorts all content by ID - this may be bad later
-	banner = sorted(Banner.objects.all(), key=lambda x: x.id)[0]
+	banner = sorted(Banner.objects.all(), key=lambda x: x.id)
 	alumnis = sorted(Alumni.objects.all(), key=lambda x: x.id)
 	committees = sorted(Committee.objects.all(), key=lambda x: x.id)
 	team_members = sorted(TeamMember.objects.all(), key=lambda x: x.id)

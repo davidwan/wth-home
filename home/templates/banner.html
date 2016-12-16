@@ -1,11 +1,15 @@
-	{% if banner %}
-	  {% if banner.link %}
-	  <a href="{{ banner.link }}">
-	  {% endif %}
-	    {% if banner.status %}
-	      <h3 align="center" style="margin-top: 12px">{{ banner.content }}</h3>
-	    {% endif %}
-	  {% if banner.link %}
-	    </a>
-	  {% endif %}
-	{% endif %}
+{% if banner %}
+  {% for ban in banner %}
+    {% if ban.name == "Header Banner" %}
+      {% if ban.link %}
+        <a href="{{ ban.link }}">
+      {% endif %}
+      {% if ban.status %}
+        <h3 align="center" style="margin-top: 12px">{{ ban.content }}</h3>
+      {% endif %}
+      {% if ban.link %}
+        </a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

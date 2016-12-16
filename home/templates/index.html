@@ -58,8 +58,8 @@
            <div id="home-slider" class="flexslider" style="margin-bottom: 400px;">      
                 <ul class="slides styled-list">
                 
-                <li class="home-slide"><p class="home-slide-content">We are the <span class="highlight">Weiss Tech House</span></p></li>
-                
+                  <li class="home-slide"><p class="home-slide-content">We are the <span class="highlight">Weiss Tech House</span></p></li>
+
                 </ul>
            </div><!-- END FLEXSLIDER -->
         </div><!-- END HOME TEXT WRAPPER -->
@@ -113,9 +113,23 @@
                       <h2>We are a <span class="highlight">student-run</span> hub of technological innovation at the <span class="highlight">University of Pennsylvania</span>.
                       </h2>
                       <br>
-                      <p> Since 2003, students with a broad range of interests and skills have come here to explore, collaborate and learn as part of our community of innovators and entrepreneurs.</p>
+                      <!-- About Us 1st Paragraph -->
+                      {% if banner %}
+                        {% for ban in banner %}
+                          {% if ban.name == "About Us 1" %}
+                            <p> {{ ban.content }}</p>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
                       <br>
-                      <p>We encourage and support students with everything from development to commercialization, helping them bring their biggest ideas to life.</p>
+                      <!-- About Us 2nd Paragraph -->
+                      {% if banner %}
+                        {% for ban in banner %}
+                          {% if ban.name == "About Us 2" %}
+                            <p> {{ ban.content }}</p>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
                   </div><!-- END SUBTITLE -->
                 </div><!-- END TITLE -->                               
       </div><!-- END SIXTEEN COLUMNS -->  
@@ -133,13 +147,29 @@
               <h1>Events</h1>
 
               <div class="subtitle">
-                <p>Check out some of the upcoming events at the <span class="highlight">Weiss Tech House</span>. <br>
-                  Take your pick from the <span class="highlight">buffet</span>.</p>
+                      <!-- About Us 1st Paragraph -->
+                      {% if banner %}
+                        {% for ban in banner %}
+                          {% if ban.name == "Events 1" %}
+                            <p> {{ ban.content }}</p>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                      <br>
+                      <!-- About Us 2nd Paragraph -->
+                      {% if banner %}
+                        {% for ban in banner %}
+                          {% if ban.name == "Events 2" %}
+                            <p> {{ ban.content }}</p>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
               </div><!-- END SUBTITLE -->
             </div><!-- END TITLE -->                               
           <div class="Flexible-container">
 
-            <iframe src="https://www.google.com/calendar/embed?src=5j26m615tjipkli5af1tquh734%40group.calendar.google.com&ctz=America/New_York&mode=AGENDA" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://www.google.com/calendar/embed?src=5j26m615tjipkli5af1tquh734%40group.calendar.google.com&ctz=America/New_York&mode=AGENDA" style="border: 0" width="800" height="600" frameborder="0" 
+scrolling="no"></iframe>
           
           </div>
 
@@ -244,7 +274,8 @@
     <div class="overlay"></div><!-- END PATTERN OVERLAY -->
     <div class="container clearfix">
       <div class="parallax-content">
-        <p class="quote"><i class="icon-quote-left"></i>The Weiss Tech House is an excellent resources for student entrepreneurs because it provides an excellent safety net of knowledge and resources outside of the Penn community<i class="icon-quote-right"></i></p>
+        <p class="quote"><i class="icon-quote-left"></i>The Weiss Tech House is an excellent resources for student entrepreneurs because it provides an excellent safety net of knowledge and resources outside of the Penn 
+community<i class="icon-quote-right"></i></p>
         <div class="quote-author">--  Francisco Martin-Ramos (Wharton ’06) Inventor of VuShare --</div>
       </div><!-- END PARALLAX CONTENT -->
     </div><!-- END CONTAINER -->
@@ -252,167 +283,6 @@
   <!-- END PARALLAX SECTION -->
 
   {% include "team.html" %} 
-  
-
-  
-  
-  <!-- START PARALLAX SECTION -->
-  <!--
-  <div id="navigate" class="parallax">
-        <div class="bg2 parallax-bg"></div>
-        <div class="overlay"></div>
-        <div class="container clearfix">
-          <div class = "parallax-content animated fadeInUp" id="one">
-              <div class="col-xs-3 custom" id="one1">
-                <h2 class="txt-center">Team</h2>
-              </div>
-
-              <div class="col-xs-3 custom" id="one2">
-                <h2 class="txt-center">Events</h2>
-              </div>
-
-              <div class="col-xs-3 custom" id="one3">
-                <h2 class="txt-center">Services</h2>
-              </div>
-
-              <div class="col-xs-3 custom" id="one4">
-                <h2 class="txt-center">Portfolio</h2>
-              </div>
-            </div>
-          --><!-- 1st link -->
-          <!--
-          <div class = "parallax-content animated fadeOutUp hidden" id="two">
-            <div class="row">
-              <div class="col-xs-3 custom" id="two1">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Brent</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom" id="two2">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Grace</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom"id="two3">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Raghav</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom" id="two4">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Defu</h2>
-                </a>
-              </div>
-            </div>
-          <div class = "row">
-            <img src="{{STATIC_URL}}images/arrow.png" id='arrow2' class='arrow'>
-          </div>
-        </div>
-        --><!-- 2nd link -->
-        <!--
-        <div class = "parallax-content animated fadeOutUp hidden" id="three">
-            <div class="row">
-              <div class="col-xs-3 custom" id="three1">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Talk<br><br></h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom" id="three2">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Founder Dating</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom"id="three3">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Pitch Training</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom" id="three4">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Hackathons<br><br></h2>
-                </a>
-              </div>
-            </div>
-          <div class = "row">
-            <img src="{{STATIC_URL}}images/arrow.png" id='arrow3' class='arrow'>
-          </div>
-        </div>
-        --><!-- 3rd link -->
-        <!--
-        <div class = "parallax-content animated fadeOutUp hidden" id="four">
-            <div class="row">
-              <div class="col-xs-3 custom" id="four1">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Match Making</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom" id="four2">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Fund Raising</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom"id="four3">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Pennvention<br><br></h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom" id="four4">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Counselling<br><br></h2>
-                </a>
-              </div>
-            </div>
-          <div class = "row">
-            <img src="{{STATIC_URL}}images/arrow.png" id='arrow4'class='arrow'>
-          </div>
-        </div>
-        --><!-- 4th link -->
-        <!--
-        <div class = "parallax-content animated fadeOutUp hidden" id="five">
-            <div class="row">
-              <div class="col-xs-3 custom" id="five1">
-                <a href="https://google.com">
-                  <h2 class="txt-center">AirBnB</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom" id="five2">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Dropbox</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom"id="five3">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Stripe</h2>
-                </a>
-              </div>
-
-              <div class="col-xs-3 custom" id="five4">
-                <a href="https://google.com">
-                  <h2 class="txt-center">Twitch.tv</h2>
-                </a>
-              </div>
-            </div>
-          <div class = "row">
-            <img src="{{STATIC_URL}}images/arrow.png" id='arrow5' class='arrow'>
-          </div>
-        </div>
-
-        </div>--><!-- END CONTAINER -->
-        <!--
-     </div>-->
-    <!-- END PARALLAX SECTION -->
-
 
   
   <!-- START PARALLAX SECTION -->
@@ -424,14 +294,46 @@
          <!-- START Events -->
          <div class="contact-details" style="width: 80%">
           <a href="mailto:info@tech-house.upenn.edu">
-            <h1 style="font-size:50px; margin-bottom: 10px">info@tech-house.upenn.edu</h1>
+            <!-- Email Info -->
+              {% if banner %}
+                {% for ban in banner %}
+                  {% if ban.name == "Info Email" %}
+                     <h1 style="font-size:50px; margin-bottom: 10px">{{ ban.content }}</h1>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
           </a>
-           <h1 style="font-size:50px; margin-bottom: 10px">Phone: (215) 573-0513</h1>
-           <h1 style="font-size:50px;">Levine Hall, Rm 266<br>3330 Walnut Street<br>Philadelphia, PA 19104</h1>
-           <h3>Academic Year Hours: Monday - Thursday: 9AM - 10PM; Friday: 9AM - 5PM</h2>
-        <!--   
- 	<h3>Summer Hours: Monday - Friday: 10AM - 4PM</h3>
-	//-->
+              <!-- Phone Info -->
+              {% if banner %}
+                {% for ban in banner %}
+                  {% if ban.name == "Info Phone" %}
+                    <h1 style="font-size:50px; margin-bottom: 10px">{{ ban.content }}</h1>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              <!-- Address Info -->
+              {% if banner %}
+                {% for ban in banner %}
+                  {% if ban.name == "Info Address 1" %}
+                    <h1 style="font-size:50px;">{{ ban.content }}<br></h1>
+                  {% endif %}
+                  {% if ban.name == "Info Address 2" %}
+                    <h1 style="font-size:50px;">{{ ban.content }}<br></h1>
+                  {% endif %}
+                  {% if ban.name == "Info Address 3" %}
+                    <h1 style="font-size:50px; margin-bottom: 10px">{{ ban.content }}<br></h1>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+           <!-- Academic Hours -->
+              {% if banner %}
+                {% for ban in banner %}
+                  {% if ban.name == "Info Academic Hours" %}
+                    <h1 style="font-size:50px; margin-bottom: 10px">{{ ban.content }}</h1>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+
         </div>      
       <!-- END CONTACT DETAILS -->
                 </div><!-- END PARALLAX CONTENT -->
